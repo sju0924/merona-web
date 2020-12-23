@@ -4,10 +4,12 @@
   "description": "maplestory club of KyungHee Univ. Web service",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "test on",
+    "start": "node app.js"
   },
   "keywords": [
-    "merona"
+    "nodejs",
+    "json"
   ],
   "author": "jeon sohn",
   "license": "ISC",
