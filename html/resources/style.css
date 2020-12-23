@@ -1,0 +1,62 @@
+@font-face{
+    src:url("fonts/Maplestory Bold.ttf") ;
+    font-family:"MapleBold" ;
+}
+@font-face{
+    src:url("fonts/Maplestory Light.ttf") ;
+    font-family:"MapleLight" ;
+}
+
+    
+h1{
+     font-family: "MapleBold", serif;
+}
+
+header{
+
+    position: fixed;
+
+    background-color: #8cca6f;
+
+    width:100%;
+
+    top: 0px;
+
+    z-index: 5;
+
+    height: 50px;
+
+}
+
+
+
+nav li{
+
+    color: whitesmoke;
+
+    display: inline-block;
+
+    margin: 0px 50px;
+
+}
+
+a{
+    font-family : "MapleLight",serif;
+
+    text-decoration: none;
+    color: #629949;
+
+
+
+}
+
+.home{
+    text-align: center;
+
+    height: 650px;
+
+    position:relative;
+
+    top:50px;
+}
+

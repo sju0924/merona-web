@@ -1,18 +1,15 @@
 const https = require('http');
 var express = require('express');
+var app = express();
+var fs = require('fs');
 
-const server = https.createServer((request,response) => { 
-    response.writeHead(200, { 'Content-Type' : 'text/html'} );
-    if(request.url === '/'){
-        response.write("Hello, it's Merona web development project");
-    }
-    else{
-        var resString = String(request.url);
-        response.write(resString);
-    }
-    response.end();
-    console.log(request); 
-}); 
+app.use(express.static(__dirname + '/html/resources'));
 
-server.listen(process.env.PORT || 5000)
+app.get('/',function(req,res){
+    res.sendFile(__dirname + '/html/index.html');
+})
+
+app.listen(process.env.PORT || 5000,function(){
+    console.log("Server has created");   
+})
 
