@@ -1,0 +1,17 @@
+{
+  "name": "meronaweb",
+  "version": "1.0.0",
+  "description": "maplestory club of KyungHee Univ. Web service",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "merona"
+  ],
+  "author": "jeon sohn",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
