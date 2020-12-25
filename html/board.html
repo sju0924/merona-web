@@ -3,19 +3,23 @@
 
     <title>Board</title>
     <link href="./style.css" rel="stylesheet" type="text/css">
+    <script src = "./javascript/board.js"></script>
 
 </head>
-<script src = "./board.js"></script>
+
 <body>
     <div>
         <h1>글 작성</h1>
     </div>
     <div>
-        <p> 제목 </p><input type="text" id = "title" style="float:left"></br>
-        <p>작성자 </p><input type="text" id = "author"></br>
-    </br>
-        <input type = "text" id = "content" height = "100"></br>
-        <input type = "button" id = "submit" value = "등록" onclick = "submitf()"> 
-
+        <form method = 'get', action = '/submit'>
+            <p>제목 </p><input type="text" id = "title" style="float:left"></br>
+            <p>작성자 </p><input type="text" id = "author"></br>
+        </br>
+            <input type = "text" id = "content" height = "100"></br>
+            <input type = "submit" id = "submitbutton" value = "등록"> 
+    
+        </form>
     </div>
+
 </body>

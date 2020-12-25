@@ -1,7 +1,8 @@
 //const MongoClient = require('mongodb').MongoClient;
 
-
 var mongoose = require("mongoose");
+const uri = "mongodb+srv://Jeon:1sAlqiuKv0VnJlt8@cluster0.ggx7e.mongodb.net/merona?retryWrites=true&w=majority";
+mongoose.connect(uri,{useNewUrlParser: true ,useUnifiedTopology: true ,});
 var db = mongoose.connection;
 var currentindex = 0;
 
@@ -18,7 +19,14 @@ BoardSchema.methods.speak = function () {
 }
 
 /* Model 선언 */
-var BoardModel = mongoose.model("BoardModel", BoardSchema);
+
+
+var BoardSchema = mongoose.Schema({
+    Title: String,
+    Author: String,
+	Content: String,
+	Index: String
+});
 
 	
 /*.find(function(err, models){
@@ -28,6 +36,7 @@ var BoardModel = mongoose.model("BoardModel", BoardSchema);
 */
 
 function submitf(){
+	var BoardModel = mongoose.model("BoardModel", BoardSchema);
 	/* Create Instance */
 	var Ins = new BoardModel({ 
 		Title: document.getElementById("title").value,
