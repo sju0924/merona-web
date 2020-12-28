@@ -54,6 +54,9 @@ app.get('/submit',function(req,res){
     */
 })
 
+app.get('/list',function(req,res){
+    res.sendFile(__dirname + '/html/list.html');
+})
 
 app.listen(process.env.PORT || 5000,function(){
     console.log("Server has created");   
