@@ -50,13 +50,17 @@ a{
 
 }
 
-.home{
-    text-align: center;
+table{
+    margin : auto;
+}
 
-    height: 650px;
+.contenttable{
+    text-align: center;
 
     position:relative;
 
     top:50px;
 }
+
+
 

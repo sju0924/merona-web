@@ -50,10 +50,12 @@ a{
 
 }
 
-.home{
-    text-align: center;
+form{
+    margin: auto;
+}
 
-    height: 650px;
+.writetable{
+    text-align: center;
 
     position:relative;
 

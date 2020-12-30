@@ -1,10 +1,22 @@
 <head>
     <meta charset = "utf-8">
     <title>Board</title>
-    <link href="./style.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div id="contenttable">
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="../" style="color : white">홈</a></li>
+                <li> <a href="../board" style="color : white">게시판</a></li>
+                <li> <a href="../list" style="color : white">to-do</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenttable">
         <h1>게시물 리스트</h1></body></br>
         <table border="1">
             <thead>
@@ -25,8 +37,7 @@
                 <%} %>
             </tbody>
         </table>
-    </div>
-    <div>
+        <br>
         <button type="button" onclick="location.href='/board/write'">글쓰기</button>
     </div>
 
