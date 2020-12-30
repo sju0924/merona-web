@@ -3,7 +3,6 @@
 
     <title>Board</title>
     <link href="./style.css" rel="stylesheet" type="text/css">
-    <script src = "./javascript/board.js"></script>
 
 </head>
 
@@ -13,10 +12,10 @@
     </div>
     <div>
         <form method = 'get', action = '/submit'>
-            <p>제목 </p><input type="text" id = "title" style="float:left"></br>
-            <p>작성자 </p><input type="text" id = "author"></br>
+            <p>제목 </p><input type="text" name = "title" id = "title" style="float:left"></br>
+            <p>작성자 </p><input type="text" name = "author" id = "author"></br>
         </br>
-            <input type = "text" id = "content" height = "100"></br>
+            <input type = "text" name = "content" id = "content" height = "100"></br>
             <input type = "submit" id = "submitbutton" value = "등록"> 
     
         </form>
