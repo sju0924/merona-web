@@ -54,6 +54,14 @@ table{
     margin : auto;
 }
 
+button{
+    position: relative;
+    color : whitesmoke;
+    background-color: #8cca6f;
+    border : 0px;
+    outline:0px;
+}
+
 .contenttable{
     text-align: center;
 
@@ -62,5 +70,16 @@ table{
     top:50px;
 }
 
+.Contentview{
+    text-align: center;
+
+    position:relative;
+
+    top:50px;
+}
+
+.Buttons{
+    float: right;
+}
 
 

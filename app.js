@@ -31,7 +31,7 @@ app.get('/board',function(req,res){
     
     BoardModel.find(function(err,data){ // 게시물을 MongoDB에서 가져오기
         if(err) res.send(err);
-        console.log(data);
+        //console.log(data);
         res.render("board.html",{"content":data}); // merona-web\views에 board.html이 있음.
     });
     
@@ -39,8 +39,26 @@ app.get('/board',function(req,res){
     
 })
 
+//게시물 상세 보기 페이지로 route
+
+app.get('/board/:idx',function(req,res){
+    
+    var Cidx = req.params.idx;
+    console.log(Cidx);
+    //res.send(Cidx);
+
+    BoardModel.find({"Title":Cidx}, function(err,data){ // 게시물을 MongoDB에서 가져오기
+        if(err) res.send(err);
+        console.log(data);
+        res.render("content.html",{"detail":data}); // merona-web\views에 board.html이 있음.
+    });
+    
+    
+    
+})
+
 //게시판-글쓰기로 route
-app.get('/board/write',function(req,res){
+app.get('/write',function(req,res){
     res.sendFile(__dirname + '/views/write.html');
 })
 

@@ -23,22 +23,20 @@
                 <tr>
                     <th>제목</th>
                     <th>작성자</th>
-                    <th>내용</th>
                 </tr>
             </thead>
             <tbody>
                 <%for(var i in content){ %>
                     <%var tmp = content[i]; %>
                     <tr>
-                        <td><%=tmp.Title %></td>
+                        <td><a href="./<%=tmp.Title %>"><%=tmp.Title %></a></td>
                         <td><%=tmp.Author %></td>
-                        <td><%=tmp.Content %></td>
                     </tr>
                 <%} %>
             </tbody>
         </table>
         <br>
-        <button type="button" onclick="location.href='/board/write'">글쓰기</button>
+        <button type="button" onclick="location.href='../write'">글쓰기</button>
     </div>
 
 </body>
