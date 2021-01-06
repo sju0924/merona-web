@@ -21,6 +21,7 @@
         <table border="1">
             <thead>
                 <tr>
+                    <th>No</th>
                     <th>제목</th>
                     <th>작성자</th>
                 </tr>
@@ -29,7 +30,8 @@
                 <%for(var i in content){ %>
                     <%var tmp = content[i]; %>
                     <tr>
-                        <td><a href="./<%=tmp.Title %>"><%=tmp.Title %></a></td>
+                        <td><%=tmp.Index %></td>
+                        <td><a href="./<%=tmp.Index %>"><%=tmp.Title %></a></td>
                         <td><%=tmp.Author %></td>
                     </tr>
                 <%} %>

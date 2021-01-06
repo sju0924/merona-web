@@ -3,10 +3,10 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 var mongoose = require("mongoose");
+const e = require('express');
 const uri = "mongodb+srv://Jeon:1sAlqiuKv0VnJlt8@cluster0.ggx7e.mongodb.net/merona?retryWrites=true&w=majority";
 mongoose.connect(uri,{useNewUrlParser: true ,useUnifiedTopology: true ,});
 var db = mongoose.connection;
-var currentindex = 0;
 
 //게시판 게시물의 형식
 var BoardSchema = mongoose.Schema({
@@ -17,6 +17,13 @@ var BoardSchema = mongoose.Schema({
 });
 //boardmodels collection을 연결
 var BoardModel = mongoose.model("boardmodels", BoardSchema);
+BoardModel.countDocuments(function(err,count){
+    if(err) console.log(err)
+    else{
+        currentindex = count;
+        console.log(currentindex);
+    }
+});
 
 //메인 화면(index) 로 route
 app.use(express.static(__dirname + '/resources'));
@@ -47,7 +54,7 @@ app.get('/board/:idx',function(req,res){
     console.log(Cidx);
     //res.send(Cidx);
 
-    BoardModel.find({"Title":Cidx}, function(err,data){ // 게시물을 MongoDB에서 가져오기
+    BoardModel.find({"Index":Cidx}, function(err,data){ // 게시물을 MongoDB에서 가져오기
         if(err) res.send(err);
         console.log(data);
         res.render("content.html",{"detail":data}); // merona-web\views에 board.html이 있음.
@@ -64,6 +71,7 @@ app.get('/write',function(req,res){
 
 //게시판-제출로 write. 사용자가 직접 사용하는 페이지는 아님.
 app.get('/submit',function(req,res){
+    console.log("현재 index = "+currentindex)
     //Query 저장
     var gettitle = req.query.title;
     var getauthor = req.query.author;
