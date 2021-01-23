@@ -9,8 +9,10 @@
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "dev:server": "npm start",
     "dev:client": "cd todolist_client && npm start",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd todolist_client && npm install && npm run build"
   },
+
+
   "keywords": [
     "nodejs",
     "json"
