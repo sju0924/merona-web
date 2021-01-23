@@ -5,7 +5,11 @@
   "main": "app.js",
   "scripts": {
     "test": "test on",
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm start",
+    "dev:client": "cd todolist_client && npm start",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [
     "nodejs",
@@ -14,9 +18,13 @@
   "author": "jeon sohn",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "concurrently": "^5.3.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.6",
     "mongodb": "^3.6.3",
-    "mongoose": "^5.11.8"
+    "mongoose": "^5.11.8",
+    "nodemon": "^2.0.7"
   }
 }

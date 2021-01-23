@@ -1,6 +1,11 @@
 const https = require('http');
+//express 모듈 불러오기
 var express = require('express');
 var app = express();
+// path 모듈 불러오기
+const path = require('path');
+
+//mongoDB 모듈 불러오기
 var fs = require('fs');
 var mongoose = require("mongoose");
 const e = require('express');
@@ -104,12 +109,23 @@ app.get('/submit',function(req,res){
 
 //to-do 로 route
 app.get('/list',function(req,res){
-    res.sendFile(__dirname + '/views/list.html');
+    res.sendFile(path.join(__dirname+'/todolist_client/build/index.html'));
 })
+
+app.get('/api/data',function(req,res){
+    res.json({ greeting: 'Hello World' });
+})
+
 
 //포트 5000에서 앱 실행
 app.listen(process.env.PORT || 5000,function(){
     console.log("Server has created");   
 })
+
+// 리액트 정적 파일 제공
+app.use(express.static(path.join(__dirname, 'todolist_client/build')));
+// 라우트 설정
+
+
 
 
