@@ -5,12 +5,12 @@ const initialTodos = [
     {
       id: 1,
       text: '일일 퀘스트',
-      done: true
+      done:false
     },
     {
       id: 2,
       text: '코인 모으기',
-      done: true
+      done: false
     },
     {
       id: 3,
@@ -20,6 +20,22 @@ const initialTodos = [
     {
       id: 4,
       text: '일간보스 잡기',
+      done: false
+    },
+
+    {
+      id: 5,
+      text: '몬스터파크 돌기',
+      done: false
+    },
+    {
+      id: 6,
+      text: '유니온 코인 모으기',
+      done: false
+    },
+    {
+      id: 7,
+      text: '명장 유지하기',
       done: false
     }
 ];
@@ -45,7 +61,7 @@ const TodoNextIdContext = createContext();
 
 export function TodoProvider({ children }) {
   const [state, dispatch] = useReducer(todoReducer, initialTodos);
-  const nextId = useRef(5);
+  const nextId = useRef(8);
 
   return (
     <TodoStateContext.Provider value={state}>
