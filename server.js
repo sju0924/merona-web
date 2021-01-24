@@ -32,6 +32,7 @@ BoardModel.countDocuments(function(err,count){
 
 //메인 화면(index) 로 route
 app.use(express.static(__dirname + '/resources'));
+app.use(express.static(__dirname + '/views'));
 app.get('/',function(req,res){
     res.sendFile(__dirname + '/views/index.html');
 })
