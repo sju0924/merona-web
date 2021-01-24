@@ -107,11 +107,10 @@ app.get('/submit',function(req,res){
 })
 
 // 리액트 정적 파일 제공
-//app.use(express.static(__dirname +'/todolist_client/build'));
+app.use(express.static(__dirname +'/todolist_client/build'));
 //to-do 로 route
 app.get('/list',function(req,res){
-    //res.sendFile(__dirname+'/todolist_client/build/index.html');
-    res.send(1);
+    res.sendFile(__dirname+'/todolist_client/build/index.html');
 })
 
 app.get('/api/data',function(req,res){

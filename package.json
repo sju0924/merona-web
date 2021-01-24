@@ -2,11 +2,10 @@
   "name": "meronaweb",
   "version": "1.0.0",
   "description": "maplestory club of KyungHee Univ. Web service",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "test on",
-    "start": "node server.js"
-    
+    "start": "node server.js"    
   },
 
 
