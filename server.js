@@ -32,7 +32,6 @@ BoardModel.countDocuments(function(err,count){
 
 //메인 화면(index) 로 route
 app.use(express.static(__dirname + '/resources'));
-app.use(express.static(__dirname + '/views'));
 app.get('/',function(req,res){
     res.sendFile(__dirname + '/views/index.html');
 })
@@ -108,10 +107,11 @@ app.get('/submit',function(req,res){
 })
 
 // 리액트 정적 파일 제공
-app.use(express.static(__dirname +'/todolist_client/build'));
+//app.use(express.static(__dirname +'/todolist_client/build'));
 //to-do 로 route
 app.get('/list',function(req,res){
-    res.sendFile(__dirname+'/todolist_client/build/index.html');
+    //res.sendFile(__dirname+'/todolist_client/build/index.html');
+    res.send(1);
 })
 
 app.get('/api/data',function(req,res){
