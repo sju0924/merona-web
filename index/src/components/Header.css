@@ -1,0 +1,58 @@
+/*css 서식 지정*/
+
+.logo {
+    height: 4.5rem;
+    background-color: #56a6f7;
+    width: 100vw;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 85px;
+}
+
+.sub_title {
+    height: 3rem;
+    background-color: #56a7f7dc;
+    width: 100vw;
+    line-height: 2rem;
+    color: rgba(255, 255, 255, 0.384);
+    font-size: 1rem;
+    text-align: center;
+    line-height: 40px;
+}
+
+.image {
+    height: 30px;
+    width: 30vw;
+    color: white;
+    text-align: left;
+}
+
+.menu {
+    background-color: #343a40;
+    height: 50rem;
+    width : 15rem;
+    text-align: center;
+}
+
+.menu-item {
+    display: inline-block;
+    color: white;
+    font-size: 1rem;
+    line-height: 4.5rem;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    background-color: #495057;
+}
+
+.menu-item:active, .menu-item.active {
+    background-color: #1862ab;
+}
+
