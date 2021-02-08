@@ -45,23 +45,76 @@ a{
 
     text-decoration: none;
     color: #629949;
+}
 
-
-
+h1{
+    font-family : "MapleLight",serif;
+    text-decoration: none;
+    color: #629949;
 }
 
 table{
     margin : auto;
+    object-position: center;
+    border-left: 0px;
+    border-right: 0px;
 }
+
+table.contenttable {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin: 0px 10px;
+  }
+  table.contenttable thead th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #fff;
+    background: #349734c7;
+    margin: 20px 10px;
+  }
+  table.contenttable tbody th {
+    padding: 10px;
+
+  }
+  table.contenttable td {
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+  }
+
+  table.contenttable .even {
+    background: #ecfae3;
+  }
+
+
 
 button{
     position: relative;
-    color : whitesmoke;
-    background-color: #8cca6f;
-    border : 0px;
-    outline:0px;
+    color : #8cca6f;
+    background-color: whitesmoke ;
+    border : 2px solid #8cca6f;
+    margin:10px 10px 10px 10px;
+    font-size:large;
+
+    float: right;
+    border-radius: 5px 5px 5px 5px;
 }
 
+button:hover{
+    position: relative;
+    background-color : #8cca6f;
+    color: whitesmoke;
+    margin:10px 10px 10px 10px;
+}
+
+.title{
+    margin-top: 70px;
+    text-align: center;
+}
 .contenttable{
     text-align: center;
 
@@ -82,6 +135,10 @@ button{
 
 .Buttons{
     float: right;
+}
+
+.submitbutton{
+    margin-top: 30px;
 }
 
 
