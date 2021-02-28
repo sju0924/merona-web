@@ -18,18 +18,23 @@
             </ul>
         </nav>
     </header>
-
-    <div class = "writetable">
-        <h1>글 작성</h1>
-        <br>
-        <form method = 'get', action = '/submit'>
-            <p>제목</p><input type="text" name = "title" id = "title"></br>
-            <p>작성자 </p><input type="text" name = "author" id = "author"></br>
-        </br>
-            <input type = "text" name = "content" id = "content" height = "100"></br>
-            <input type = "submit" id = "submitbutton" value = "등록"> 
+    <div class = "writecontent">
+        <div class = "writehead">
+            <img src = "iconmonstr-pencil-9-64.png" alt="외않되" width = "30px" height = "30px" style = "float: left; padding-right: 10px" >     
+            <h1>글 작성</h1>
+        </div>
+        <div class = "writetable">
+            <form method = 'post', action = '/submit'>
+                <input class = "input_title" type="text" placeholder = "제목" name = "title" id = "title">
+               <input class = "input_author" type="text" placeholder = "작성자" name = "author" id = "author"></br>
+            </br>
+                <textarea class = "input_content" placeholder = "내용을 입력하세요" name = "content" id = "content" height = "100"></textarea>
+                <br>
+                <input class = "submitbutton" type = "submit" id = "submitbutton" value = "등록"> 
+        
+            </form>
+        </div>
     
-        </form>
     </div>
-
+    
 </body>

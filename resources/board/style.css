@@ -6,8 +6,11 @@
     src:url("fonts/Maplestory Light.ttf") ;
     font-family:"MapleLight" ;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Roboto&display=swap');
     
+body{
+    background-color: rgb(208, 228, 217);
+}
 h1{
      font-family: "MapleBold", serif;
 }
@@ -15,15 +18,10 @@ h1{
 header{
 
     position: fixed;
-
     background-color: #8cca6f;
-
     width:100%;
-
     top: 0px;
-
     z-index: 5;
-
     height: 50px;
 
 }
@@ -33,18 +31,20 @@ header{
 nav li{
 
     color: whitesmoke;
-
     display: inline-block;
-
     margin: 0px 50px;
 
 }
+a.nav{
 
-a{
     font-family : "MapleLight",serif;
 
+}
+
+a.contenttext{
+    font-family: 'Nanum Gothic', sans-serif;
     text-decoration: none;
-    color: #629949;
+    color: #000000;
 }
 
 h1{
@@ -54,36 +54,55 @@ h1{
 }
 
 table{
-    margin : auto;
+    
     object-position: center;
     border-left: 0px;
     border-right: 0px;
 }
 
+/*
+   게시글 목록 (Board.html)
+*/
+.boardtitle{
+    margin : 0 auto;
+    border-bottom:2px solid #8cca6f;
+}
 table.contenttable {
+    
     border-collapse: collapse;
     text-align: left;
     line-height: 1.5;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    margin: 0px 10px;
+    margin: 0 auto;
   }
   table.contenttable thead th {
     padding: 10px;
     font-weight: bold;
+    font-family: 'Nanum Gothic', sans-serif;
     vertical-align: top;
-    color: #fff;
-    background: #349734c7;
+    color: rgb(250, 250, 250);
+    background: #8cca6f;
     margin: 20px 10px;
+    text-align:center;
   }
   table.contenttable tbody th {
     padding: 10px;
+    
 
   }
   table.contenttable td {
     padding: 10px;
     vertical-align: top;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;    
+    text-align: center;
+  }
+
+  table.contenttable td.contenttitle {
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;    
+    text-align: left;
   }
 
   table.contenttable .even {
@@ -110,10 +129,28 @@ button:hover{
     color: whitesmoke;
     margin:10px 10px 10px 10px;
 }
-
+.head{
+    height: 40px;
+}
+.boardclass{
+    width: 60%;
+    margin : 0 auto;
+    padding: 40px 40px 40px 40px;
+    box-shadow: 10px 10px 5px rgb(184, 187, 182);
+    
+    background-color :rgb(250, 250, 250)
+}
 .title{
-    margin-top: 70px;
     text-align: center;
+}
+
+/*
+    게시판 내용 보여주는 클래스
+*/
+
+.contents{
+
+    margin : 0 auto;
 }
 .contenttable{
     text-align: center;
@@ -121,6 +158,7 @@ button:hover{
     position:relative;
 
     top:50px;
+    padding: 10px;
 }
 
 .Contentview{
@@ -141,4 +179,34 @@ button:hover{
     margin-top: 30px;
 }
 
+
+/*
+   게시글 (Content.html)
+*/
+
+.Contentview{
+    width: 60%;
+    margin : 0 auto;
+    padding: 20px 40px 40px 40px;
+    box-shadow: 10px 10px 5px rgb(184, 187, 182);
+    text-align : left;
+    background-color :rgb(250, 250, 250)
+}
+.title{
+    border-bottom: 1px solid rgb(80, 80, 80);   
+    text-align : left; 
+}
+
+.Buttons{
+    padding-bottom: 20px;
+}
+
+ul.contenttitle{
+    list-style: none;
+}
+
+ul.contenttitle li{
+    border:0;
+    display:inline-block;
+}
 

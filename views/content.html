@@ -2,6 +2,7 @@
     <meta charset = "utf-8">
     <link href="style.css" rel="stylesheet" type="text/css">
     <title> <%=detail[0].Title %> </title>
+    
 </head>
 <body>
     <header>
@@ -16,18 +17,27 @@
         </nav>
     </header>
     <div class = "ContentView">
-        <div id = "title" >
-            <h2> <%=detail[0].Title %> </h2>
+        <div class = "title" >
+            <ul class = "contenttitle">
+                <li>
+                    <h2 style="border-right:3px solid #629949; padding-right: 5px;"> <%=detail[0].Title %> </h2>
+                </li>
+                <li>
+                    <a><%=detail[0].Author %></a>
+                </li>
+            </ul>
+            
         </div>
-        <div id="content">
+        <div class="content">
             <p><%=detail[0].Content %></p>
+        </div>
+        <div class = "Buttons">
+            <button type="button" onclick="location.href='../board'" >목록 보기</button>
+            <button type="button" onclick="location.href='../write'">글쓰기</button>
         </div>
     </div>
     <br>
-    <div class = "Buttons">
-        <button type="button" onclick="location.href='../board'" >목록 보기</button>
-        <button type="button" onclick="location.href='../write'">글쓰기</button>
-    </div>
+
 
 
    

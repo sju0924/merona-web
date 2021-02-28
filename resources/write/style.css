@@ -7,6 +7,9 @@
     font-family:"MapleLight" ;
 }
 
+body{
+    background-color: rgb(208, 228, 217);
+}
     
 h1{
      font-family: "MapleBold", serif;
@@ -51,14 +54,88 @@ a{
 }
 
 form{
-    margin: auto;
+    margin: 0 auto;
 }
 
-.writetable{
+/*
+    전체 레이아웃
+*/
+
+
+.writecontent{
     text-align: center;
-
     position:relative;
-
-    top:50px;
+    width: 60%;
+    margin : 0 auto;    
+    margin-top: 50px;
+    padding: 20px 40px 40px 40px;
+    box-shadow: 10px 10px 5px rgb(184, 187, 182);
+    background-color :rgb(250, 250, 250)
 }
 
+/*
+    타이틀 레이아웃
+*/
+
+.writehead{
+    margin : 0 auto; 
+    margin-bottom: 30px;   
+    border-bottom:2px solid #8cca6f;
+    
+    text-align:left;
+    
+}
+.writehead h1{    
+    font-family : "MapleLight",serif;
+    text-decoration: none;
+    color: #629949;
+}
+
+
+
+/*
+    input 요소들
+*/
+
+input.input_title{
+    margin: 0px;
+    width: 70%;
+    height:40px;
+    display:inline-block;
+    border:2px solid #629949;
+    
+}
+input.input_author{
+    margin: 0px;
+    width: 20%;
+    height:40px;
+    display:inline-block;
+    border:2px solid #629949;
+}
+textarea.input_content{
+    width:90%;
+    height:50%;
+    border:3px solid #629949;
+}
+form p{
+    display:inline-block;
+}
+
+input.submitbutton{
+    position: relative;
+    color : #8cca6f;
+    background-color: whitesmoke ;
+    border : 2px solid #8cca6f;
+    margin:10px 10px 10px 10px;
+    font-size:large;
+
+    float: right;
+    border-radius: 5px 5px 5px 5px;
+}
+
+input.submitbutton:hover{
+    position: relative;
+    background-color : #8cca6f;
+    color: whitesmoke;
+    margin:10px 10px 10px 10px;
+}

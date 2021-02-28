@@ -7,47 +7,50 @@
     <header>
         <nav>
             <ul>
-                <li> <a href="../" style="color : white">홈</a></li>
-                <li> <a href="../board" style="color : white">게시판</a></li>
-                <li> <a href="../list" style="color : white">to-do</a></li>
-
-
+                <li> <a class = "nav" href="../" style="color : white">홈</a></li>
+                <li> <a class = "nav" href="../board" style="color : white">게시판</a></li>
+                <li> <a class = "nav" href="../list" style="color : white">to-do</a></li>
             </ul>
         </nav>
     </header>
+    <div class = "head">
 
-    <div class = "title">        
-        <h1>게시물 리스트</h1></body>
     </div>
-    <div class="contents">
-        <table class="contenttable">
-            <thead>
-                <tr>
-                    <th width = "10%">No</th>
-                    <th width = "60%">제목</th>
-                    <th width = "20%">작성자</th>
-                </tr>
-            </thead>
-            <tbody>
-                <%for(var i in content){ %>
-                    <%var tmp = content[i]; %>
-                    <% var int_val = Number(tmp.Index); %>
-                    <%if (int_val % 2 == 1){ %>
-                        <tr class = "even">
-                    <%} else{ %> 
-                    <tr>
-                        <%} %>
-                        <td width = "10%"><a><%=tmp.Index %></a></td>
-                        <td><a href="./<%=tmp.Index %>"><%=tmp.Title %></a></td>                                
-                        <td><a><%=tmp.Author %></a></td>
-                    </tr>
-                <%} %>
-            </tbody>
-        </table>
+    <div class = "boardclass">
+        <div class = "boardtitle"> 
+            <img src = "iconmonstr-clipboard-1-64.png" alt="외않되" width = "30px" height = "30px" style = "float: left; padding-right: 10px" >     
+            <h1>게시물 리스트</h1></body>
+        </div>
         <br>
+        <div class="contents">
+            <table class="contenttable">
+                <thead>
+                    <tr>
+                        <th width = "10%">No</th>
+                        <th width = "60%">제목</th>
+                        <th width = "20%">작성자</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%for(var i in content){ %>
+                        <%var tmp = content[i]; %>
+                        <% var int_val = Number(tmp.Index); %>
+                        <tr>
+                            <td width = "10%"><a class = "contenttext"><%=tmp.Index %></a></td>
+                            <td class = "contenttitle"><a class = "contenttext" href="./<%=tmp.Index %>"><%=tmp.Title %></a></td>                                
+                            <td><a class = "contenttext" ><%=tmp.Author %></a></td>
+                        </tr>
+                    <%} %>
+                </tbody>
+            </table>
+            <br>
+            <div class = "submitbutton">        
+                <button type="button" onclick="location.href='../write'">글쓰기</button>                
+            </div>
+            <br>
+        </div>
+       
     </div>
-    <div class = "submitbutton">        
-        <button type="button" onclick="location.href='../write'">글쓰기</button>
-    </div>
+    
 
 </body>

@@ -13,6 +13,12 @@ const uri = "mongodb+srv://Jeon:1sAlqiuKv0VnJlt8@cluster0.ggx7e.mongodb.net/mero
 mongoose.connect(uri,{useNewUrlParser: true ,useUnifiedTopology: true ,});
 var db = mongoose.connection;
 
+//body-parser
+var bodyparser = require('body-parser');
+app.use(bodyparser.urlencoded({extended:true})); 
+app.use(bodyparser.json());
+
+
 //게시판 게시물의 형식
 var BoardSchema = mongoose.Schema({
     Title: String,
@@ -47,17 +53,14 @@ app.get('/board',function(req,res){
         res.render("board.html",{"content":data}); // merona-web\views에 board.html이 있음.
     });
     
-  //res.send("12345");
-    
 })
 
 //게시물 상세 보기 페이지로 route
-
+//idx는 게시물의 index 번호
 app.get('/board/:idx',function(req,res){
     
     var Cidx = req.params.idx;
     console.log(Cidx);
-    //res.send(Cidx);
 
     BoardModel.find({"Index":Cidx}, function(err,data){ // 게시물을 MongoDB에서 가져오기
         if(err) res.send(err);
@@ -75,12 +78,12 @@ app.get('/write',function(req,res){
 })
 
 //게시판-제출로 write. 사용자가 직접 사용하는 페이지는 아님.
-app.get('/submit',function(req,res){
+app.post('/submit',function(req,res){
     console.log("현재 index = "+currentindex)
     //Query 저장
-    var gettitle = req.query.title;
-    var getauthor = req.query.author;
-    var getcontent = req.query.content;
+    var gettitle = req.body.title;
+    var getauthor = req.body.author;
+    var getcontent = req.body.content;
     //console.log(req);
 
 
